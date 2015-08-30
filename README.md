@@ -18,5 +18,8 @@ The bulk of this repository is a shell script and various config files. On Vagra
 
 See the top of the `Vagrantfile` for configuration options. Currently supported options are:
 
-- `MYSQL_ROOT_PASSWORD`
-- `CONFIG_LOCATION`
+- `MYSQL_ROOT_PASSWORD` (Default: "password")
+- `CONFIG_LOCATION` (Default: "/var/www/app/config/vm")
+- `PHP_TIMEZONE` (Default: "UTC")
+- `FRONT_CONTROLLER` (Default: "app_dev")
+- `PUBLIC_DIR` (Default: "web")

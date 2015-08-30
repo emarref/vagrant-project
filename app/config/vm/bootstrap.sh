@@ -26,6 +26,8 @@ apt-get install -y \
 
 # Configure nginx
 cp $CONFIG_LOCATION/nginx.conf /etc/nginx/nginx.conf
+sed -i "s/PUBLIC_DIR/$PUBLIC_DIR/g" /etc/nginx/nginx.conf
+sed -i "s/FRONT_CONTROLLER/$FRONT_CONTROLLER/g" /etc/nginx/nginx.conf
 [ -d /etc/nginx/sites-enabled ] && rm -rf /etc/nginx/sites-enabled
 [ -d /etc/nginx/sites-available ] && rm -rf /etc/nginx/sites-available
 service nginx restart
