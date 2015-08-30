@@ -12,6 +12,8 @@ The bulk of this repository is a shell script and various config files. On Vagra
 
 `curl -sSL https://raw.githubusercontent.com/emarref/vagrant-project/symfony/install.sh | sh`
 
+This will copy the [Vagrantfile](Vagrantfile) and the contents of the [app/config/vm](app/config/vm) dir to the current directory (keeping the path).
+
 ## The hard way
 
 Read the [install.sh](install.sh) file and do what suits you.
