@@ -8,8 +8,18 @@ The bulk of this repository is a shell script and various config files. On Vagra
 
 # Installation
 
+## The easy way
+
+`curl -sSL https://raw.githubusercontent.com/emarref/vagrant-project/symfony/install.sh | sh`
+
+## The hard way
+
+Read the [install.sh](install.sh) file and do what suits you.
+
+## The manual way
+
 1. Copy the `Vagrant` file to the root of your project.
-2. Copy the `app/config/vm` dir to the `app/config` dir of your project.
+2. Copy the contents of the `app/config/vm` dir to the `app/config/vm` dir of your project.
 3. `vagrant up`
 
 > :rocket: I recommend taking a stroll through the configuration and bootstrap script to understand exactly what it's doing before you run it.
