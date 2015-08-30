@@ -2,9 +2,12 @@
 
 # Configure aptitude
 export DEBIAN_FRONTEND=noninteractive
-apt-get update
 debconf-set-selections <<< "mysql-server mysql-server/root_password password $MYSQL_ROOT_PASSWORD"
 debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"
+
+# Include docker
+curl -sSL https://get.docker.com/ | sh
+sudo usermod -aG docker vagrant
 
 # Install required packages
 apt-get install -y \
@@ -20,10 +23,6 @@ apt-get install -y \
     php5-mcrypt \
     php5-mysql \
     php5-xdebug
-
-# Include docker
-curl -sSL https://get.docker.com/ | sh
-sudo usermod -aG docker vagrant
 
 # Configure nginx
 cp $CONFIG_LOCATION/nginx.conf /etc/nginx/nginx.conf
