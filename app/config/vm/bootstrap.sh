@@ -36,6 +36,7 @@ sed -i "s/MYSQL_ROOT_PASSWORD/$MYSQL_ROOT_PASSWORD/g" ~/.my.cnf
 mysql < $CONFIG_LOCATION/init.sql
 
 # Configure PHP
+sed -i "s/;date.timezone =/date.timezone = $PHP_TIMEZONE/g" /etc/php5/{fpm,cli}/php.ini
 cp $CONFIG_LOCATION/xdebug.ini /etc/php5/{fpm,cli}/conf.d/
 cp $CONFIG_LOCATION/fpm-pool.conf /etc/php5/fpm/pool.d/
 service php5-fpm restart

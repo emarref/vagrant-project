@@ -1,5 +1,6 @@
 MYSQL_ROOT_PASSWORD="password"
 CONFIG_LOCATION="/var/www/app/config/vm"
+PHP_TIMEZONE="UTC"
 
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
