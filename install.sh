@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-DEST_DIR=`pwd`
-CONFIG_DIR="${DEST_DIR}/app/config/vm"
+[ -z "$DEST_DIR" ] && DEST_DIR=`pwd`
+[ -z "$CONFIG_DIR" ] && CONFIG_DIR="${DEST_DIR}/app/config/vm"
 
 curl -o /tmp/symfony.zip -L https://github.com/emarref/vagrant-project/archive/symfony.zip
 
