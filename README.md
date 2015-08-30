@@ -1,4 +1,4 @@
-Sane defaults for running a Vagrant VM for Symfony development.
+Sane defaults for running a Vagrant VM for PHP development.
 
 The bulk of this repository is a shell script and various config files. On Vagrant provision, the shell script `bootstrap.sh` is executed in the VM. This installs a LEMP stack, Docker, and various other packages, then configures them. The result is a browsable PHP VM.
 
