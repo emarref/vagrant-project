@@ -11,6 +11,7 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 #sudo usermod -aG docker vagrant
 
 # Install required packages
+apt-get update
 apt-get install -y \
     htop \
     wget \
