@@ -7,7 +7,8 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 
 # Include docker
 # Disabled by default, as it triples provision time. Enable if you'll use it.
-#curl -sSL https://get.docker.com/ | shs
+#curl -sSL https://get.docker.com/ | sh
+#usermod -aG docker vagrant
 
 # Install required packages
 apt-get update
