@@ -49,4 +49,4 @@ service php5-fpm restart
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install Mailcatcher
-#apt-get install build-essential libsqlite3-dev ruby1.9.1-dev && gem install mailcatcher
+#apt-get install -y build-essential libsqlite3-dev ruby1.9.1-dev && gem install mailcatcher
