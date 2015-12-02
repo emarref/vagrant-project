@@ -7,8 +7,7 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 
 # Include docker
 # Disabled by default, as it triples provision time. Enable if you'll use it.
-#curl -sSL https://get.docker.com/ | sh
-#sudo usermod -aG docker vagrant
+#curl -sSL https://get.docker.com/ | shs
 
 # Install required packages
 apt-get update
@@ -49,4 +48,4 @@ service php5-fpm restart
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install Mailcatcher
-#sudo apt-get install build-essential libsqlite3-dev ruby1.9.1-dev && sudo gem install mailcatcher
+#apt-get install build-essential libsqlite3-dev ruby1.9.1-dev && gem install mailcatcher
